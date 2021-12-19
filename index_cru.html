@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jackbravo21</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>window.jQuery || document.write(decodeURIComponent('%3Cscript src="js/jquery.min.js"%3E%3C/script%3E'))</script>
+    <link rel="stylesheet" type="text/css" href="https://cdn3.devexpress.com/jslib/21.2.4/css/dx.common.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn3.devexpress.com/jslib/21.2.4/css/dx.light.css"/>
+    <script src="https://cdn3.devexpress.com/jslib/21.2.4/js/dx.all.js"></script>
+
+</head>
+<body>
+
+    <h1>Todas as maskaras com jQuery:</h1>
+
+        <label for="">date</label>
+        <input type="text" class="date" id="date" />
+        <br><br>
+        <label for="">time</label>
+        <input type="time" class="time" id="time" />
+        <br><br>
+        <label for="">date_time</label>
+        <input type="text" class="date_time" id="date_time" />
+        <br><br>
+        <label for="">cep</label>
+        <input type="text" class="cep" id="cep" />
+        <br><br>
+        <label for="">phone</label>
+        <input type="text" class="phone" id="phone" />
+        <br><br>
+        <label for="">phone_with_ddd</label>
+        <input type="text" class="phone_with_ddd" id="phone_with_ddd" />
+        <br><br>
+        <label for="">phone_us</label>
+        <input type="text" class="phone_us" id="phone_us" />
+        <br><br>
+        <label for="">mixed</label>
+        <input type="text" class="mixed" id="mixed" />
+        <br><br>
+        <label for="">cpf</label>
+        <input type="text" class="cpf" id="cpf" />
+        <br><br>
+        <label for="">cnpj</label>
+        <input type="text" class="cnpj" id="cnpj" />
+        <br><br>
+        <label for="">money</label>
+        <input type="text" class="money" id="money" />
+        <br><br>
+        <label for="">ip6_address</label>
+        <input type="text" class="ip6_address" id="ip6_address" />
+        <br><br>
+        <label for="">ip_address</label>
+        <input type="text" class="ip_address" id="ip_address" />
+        <br><br>
+        <label for="">percent</label>
+        <input type="text" class="percent" id="percent" />
+        <br><br>
+        <label for="">clear-if-not-match</label>
+        <input type="text" class="clear-if-not-match" id="clear-if-not-match" />
+        <br><br>
+        <label for="">placeholder</label>
+        <input type="text" class="placeholder" id="placeholder" />
+        <br><br>
+        <label for="">fallback</label>
+        <input type="text" class="fallback" id="fallback" />
+        <br><br>
+        <label for="">selectonfocus</label>
+        <input type="text" class="selectonfocus" id="selectonfocus" />
+        <br><br>
+
+
+
+<!-- https://igorescobar.github.io/jQuery-Mask-Plugin/ -->
+<script src="./js/jquery.mask.min.js"></script>
+
+<script>
+
+
+//ready significa que disparo a funcao anonima apenas depois que a pagina for carregada;
+$(document).ready(function()
+{
+  $('.date').mask('00/00/0000');
+  $('.time').mask('00:00:00');
+  $('.date_time').mask('00/00/0000 00:00:00');
+  $('.cep').mask('00000-000');
+  $('.phone').mask('0000-0000');
+  $('.phone_with_ddd').mask('(00) 0000-0000');
+  $('.phone_us').mask('(000) 000-0000');
+  $('.mixed').mask('AAA 000-S0S');
+  $('.cpf').mask('000.000.000-00', {reverse: true});
+  $('.cnpj').mask('00.000.000/0000-00', {reverse: true});
+  $('.money').mask('000.000.000.000.000,00', {reverse: true});
+  $('.money2').mask("#.##0,00", {reverse: true});
+  $('.ip6_address').mask('0ZZ.0ZZ.0ZZ.0ZZ', {
+    translation: {
+      'Z': {
+        pattern: /[0-9]/, optional: true
+      }
+    }
+  });
+  $('.ip_address').mask('099.099.099.099');
+  $('.percent').mask('##0,00%', {reverse: true});
+  $('.clear-if-not-match').mask("00/00/0000", {clearIfNotMatch: true});
+  $('.placeholder').mask("00/00/0000", {placeholder: "__/__/____"});
+  $('.fallback').mask("00r00r0000", {
+      translation: {
+        'r': {
+          pattern: /[\/]/,
+          fallback: '/'
+        },
+        placeholder: "__/__/____"
+      }
+    });
+  $('.selectonfocus').mask("00/00/0000", {selectOnFocus: true});
+
+});
+
+
+/*
+Passos:
+- Importar a biblioteca "./js/jquery.mask.min.js";
+- Escrever os campos HTML com suas classes;
+- Escrever o codigo JS com cada classe;
+
+*/
+
+</script>
+
+<style>
+
+</style>
+
+</body>
+</html>
