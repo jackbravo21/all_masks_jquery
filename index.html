@@ -22,9 +22,7 @@
 
     <table class="table table-striped fluid">
       <thead class="thead-dark">
-        <tr>
-
-          <tr><td>date html</td><td><input type="text" class="html" id="html" data-mask="00/00/0000" data-mask-selectonfocus="true"/></td><td>
+        
 
           <tr><td>date</td><td><input type="text" class="date" id="date" /></td><td>
           <tr><td>time</td><td><input type="text" class="time" id="time" /></td><td>
@@ -43,11 +41,27 @@
           <tr><td>clear-if-not-match</td><td><input type="text" class="clear-if-not-match" id="clear-if-not-match" /></td><td>
           <tr><td>placeholder</td><td><input type="text" class="placeholder" id="placeholder" /></td><td>
           <tr><td>fallback</td><td><input type="text" class="fallback" id="fallback" /></td><td>
-          <tr><td>selectonfocus</td><td><input type="text" class="selectonfocus" id="selectonfocus" /></td><td>
+          <tr><td>selectonfocus</td><td><input type="text" class="selectonfocus" id="selectonfocus" /></td><tr>
 
-        </td>            
+                   
      </table>
+
+     <hr/><br>
      
+     <h1>Exemplo direto no HTML: (codigo)</h1>
+
+     <table class="table table-striped fluid">
+      <thead class="thead-dark">        
+
+      <tr><td>date html</td><td><input type="text" name="field-name" data-mask="00/00/0000" /></td><td></td>
+      <tr><td>data-mask-reverse</td><td><input type="text" name="field-name" data-mask="00/00/0000" data-mask-reverse="true" /></td><td></td>
+      <tr><td>data-mask-clearifnotmatch</td><td><input type="text" name="field-name" data-mask="00/00/0000" data-mask-clearifnotmatch="true" /></td><td></td>
+      <tr><td>data-mask-selectonfocus</td><td><input type="text" name="field-name" data-mask="00/00/0000" data-mask-selectonfocus="true" /></td><td></td>
+      <tr><td>data-mask-selectonfocus</td><td><input type="text" class="html" id="html" data-mask="00/00/0000" data-mask-selectonfocus="true"/></td><td></td>
+      
+     
+                 
+     </table>
 
 <!-- https://igorescobar.github.io/jQuery-Mask-Plugin/ -->
 <script src="./js/jquery.mask.min.js"></script>
